@@ -1,0 +1,99 @@
+@import vars
+.chat-page
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+.chat-window
+	width: 70%
+	box-shadow: 0 5px 20px -10px #000 
+	border-radius: 10px
+	overflow: hidden
+
+.chat-header,
+.chat-footer
+	text-align: center
+	padding: 20px
+	box-shadow: 0 0 20px -10px #000
+	position: relative
+.chat-header
+	display: flex
+	justify-content: space-between
+.chat-header__author
+	font-weight: 700
+	font-size: 18px
+	input
+		border: none
+		box-shadow: 0 0 10px -5px #000
+		border-radius: 30px
+		height: 30px
+		line-height: 30px
+		padding: 0 15px
+		outline: none
+		width: 50%
+		margin: 0 auto
+
+
+.chat-footer__message
+	text-align: center
+	textarea
+		width: 90%
+		padding: 10px
+		border: none
+		box-shadow: 0 0 10px -5px #000
+		border-radius: 15px
+		outline: none
+	
+
+
+.chat-body
+	height: 400px
+	overflow-y: scroll
+	padding: 20px
+
+.messages
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+.message
+	background-color: $lightColor
+	border-radius: 10px
+	padding: 10px
+	margin-bottom: 10px
+	border: 1px solid #eee
+	width: 80%
+	float: left
+
+.message__author
+	font-weight: 700
+
+.message__author-img
+	height: 40px
+	border-radius: 50%
+	margin: 0 5px 10px 0
+	border: 2px solid #fff
+
+.message--mine
+	float: right
+	color: #fff
+	background-color: $mainColor
+
+.send-btn
+	width: 50px
+	height: 50px
+	border: none
+	border-radius: 50%
+	line-height: 50px
+	text-align: center
+	background-color: $mainColor
+	box-shadow: 0 3px 10px -5px #000
+	transition: all .3s
+	padding: 0
+	img
+		height: 25px
+		margin-right: 2px
+	&:hover
+		box-shadow: 0 0 10px -5px #000
+	float: right
