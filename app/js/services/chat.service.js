@@ -7,6 +7,7 @@ function chatService($firebaseArray){
     }
 
     chat.sendMessage = function(message){
+<<<<<<< HEAD
         console.log(message)
         chat.getMessages().$add(message).then(function(ref) {
           var id = ref.key;
@@ -15,6 +16,9 @@ function chatService($firebaseArray){
         });
 
         console.log($firebaseArray(messagesRef))
+=======
+        chat.getMessages().$add(message);
+>>>>>>> ced6baf99fc53ca6b9b1566b088c82b9fe241c0e
     }
 
     chat.shownMessages = function(){
@@ -25,4 +29,8 @@ function chatService($firebaseArray){
 }
 
 angular.module('chatApp')
+<<<<<<< HEAD
 .factory('chatService', ['$firebaseArray', chatService]);
+=======
+.factory('ChatService', ['$firebaseArray', chatService]);
+>>>>>>> ced6baf99fc53ca6b9b1566b088c82b9fe241c0e

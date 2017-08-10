@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body ng-app="chatApp">
+<<<<<<< HEAD
 
         <section class="chat-page container" ng-controller="chatCtrl as chatCtrl" ng-cloak>
             <div class="col-sm-7">
@@ -42,6 +43,38 @@
                                 <img src="../../img/send.svg" alt="">
                             </button>
                         </div>
+=======
+    <h1>Home<h1>
+
+        <section class="chat-page" ng-controller="chatCtrl as chatCtrl">
+            <div class="chat-window">
+                <div class="chat-header">
+                    <div class="chat-header__author" ng-if="chatCtrl.author">{{chatCtrl.author.displayName}}</div>
+                    <div class="chat-header__btns">
+                        <button ng-click="chatCtrl.login()" ng-if="!chatCtrl.author" class="btn btn-green">Login</button>
+                        <button ng-click="chatCtrl.logout()" ng-if="chatCtrl.author" class="btn btn-red">Logout</button>
+                    </div>
+                </div>
+
+                <div class="chat-body">
+                    <ul class="messages">
+                        <li class="message" ng-class="{ 'message--mine': m.authorId == chatCtrl.author.uid }" ng-repeat="m in chatCtrl.messagesToShow">
+                            <img class="message__author-img" ng-src="{{m.authorImg}}" alt="">
+                            <span class="message__author">{{m.author}}</span>
+                            <div class="message__text">
+                                {{m.text}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="chat-footer">
+                    <div class="chat-footer__message">
+                        <textarea  enter-sender="chatCtrl.sendMessage()" ng-model="chatCtrl.newMessage" ></textarea>
+                        <button class="send-btn" ng-click="chatCtrl.sendMessage()" type="submit">
+                            <img src="../../img/send.svg" alt="">
+                        </button>
+>>>>>>> ced6baf99fc53ca6b9b1566b088c82b9fe241c0e
                     </div>
                 </div>
             </div>
